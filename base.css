@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 :root {
-    --font-primary: 'Poppins', sans-serif;
-    --background-main: #1e1e2f;
-    --background-secondary: #272a36;
-    --background-tertiary: #383d4b;
-    --text-normal: #e6e6e6;
-    --text-muted: #b0b0b0;
-    --accent-color: #5a97ff;
-    --accent-hover: #3e76d7;
+    --font-primary: 'Roboto', sans-serif;
+    --background-main: #fafafa;  /* Light grey background */
+    --background-secondary: #ffffff; /* White for sidebar and panels */
+    --background-tertiary: #f1f1f1; /* Very light grey for message area */
+    --text-normal: #333333;  /* Dark grey text color */
+    --text-muted: #777777;  /* Medium grey for muted text */
+    --accent-color: #ff6347; /* Tomato red accent color */
+    --accent-hover: #ff4500; /* Darker red for hover state */
     --transition-speed: 0.3s;
 }
 
@@ -28,7 +28,6 @@ body {
 ::-webkit-scrollbar-thumb {
     background: var(--accent-color);
     border-radius: 5px;
-    transition: background var(--transition-speed);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -38,12 +37,12 @@ body {
 /* Navigation */
 nav[class*="guilds-"] {
     background: var(--background-secondary);
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
     transition: background var(--transition-speed);
 }
 
 nav[class*="guilds-"]:hover {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.05);
 }
 
 /* Guilds */
@@ -59,13 +58,12 @@ ul[data-list-id='guildsnav'] [class^="pill-"] {
 }
 
 ul[data-list-id='guildsnav'] [class^="pill-"]:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.1);
 }
 
 /* Sidebar */
 div[class^="sidebar-"] {
     background: var(--background-secondary);
-    transition: background var(--transition-speed);
 }
 
 /* Chat */
@@ -87,12 +85,12 @@ div[data-list-id="chat-messages"] > div {
 }
 
 div[data-list-id="chat-messages"] > div:hover {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.05);
 }
 
 /* Input Area */
 div[class^="channelTextArea-"] {
-    background-color: var(--background-tertiary);
+    background-color: var(--background-secondary);
     border: 1px solid rgba(var(--text-muted), 0.3);
     border-radius: 5px;
     padding: 10px;
@@ -106,7 +104,7 @@ div[class^="channelTextArea-"]:focus {
 /* Buttons */
 button[class*="button-"] {
     background-color: var(--accent-color);
-    color: var(--text-normal);
+    color: white;
     border: none;
     border-radius: 5px;
     padding: 8px 12px;
@@ -125,16 +123,15 @@ section[class*="themed-"] {
     display: flex;
     align-items: center;
     padding: 0 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Tooltip */
 div[class^="tooltip-"] {
     background: rgba(var(--accent-hover), 0.9);
-    color: var(--text-muted);
+    color: white;
     border-radius: 4px;
     padding: 5px;
-    transition: opacity var(--transition-speed);
 }
 
 /* Modal */
@@ -189,11 +186,10 @@ div[data-list-id='members-'] div[class^="member-"]:hover {
 
 /* Code Blocks */
 html pre {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.05);
     color: var(--text-normal);
     padding: 12px;
     border-radius: 5px;
-    overflow: auto;
 }
 
 /* Misc Elements */
