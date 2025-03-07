@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --font-primary: 'Inter', sans-serif;
+    --background-primary: #1e1e2f; /* Dark background */
+    --background-secondary: #2a2a3c; /* Slightly lighter background */
+    --background-tertiary: #3a3a4a; /* Even lighter background */
+    --background-accent: #4a4a5a; /* Accent background */
+    --text-normal: rgba(255, 255, 255, 0.9); /* Normal text color */
+    --text-muted: rgba(255, 255, 255, 0.6); /* Muted text color */
+    --accent-color: #5c9eff; /* Soft blue accent color */
+    --hover-color: rgba(255, 255, 255, 0.1); /* Hover effect color */
+    --border-radius: 8px; /* Rounded corners */
+}
+
+/* General Styles */
+body {
+    font-family: var(--font-primary);
+    background-color: var(--background-primary);
+    color: var(--text-normal);
+}
+
+::selection {
+    background-color: var(--accent-color);
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--accent-color);
+    border-radius: var(--border-radius);
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--background-secondary);
+}
+
+/* Buttons */
+button {
+    background-color: var(--accent-color);
+    color: var(--text-normal);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+
+/* Sidebar */
+nav[class*="guilds-"] {
+    background: var(--background-secondary);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+ul[data-list-id='guildsnav'] {
+    padding: 10px;
+}
+
+ul[data-list-id='guildsnav'] li {
+    border-radius: var(--border-radius);
+    padding: 8px;
+    transition: background-color 0.3s;
+}
+
+ul[data-list-id='guildsnav'] li:hover {
+    background-color: var(--hover-color);
+}
+
+/* Header */
+header {
+    background-color: var(--background-tertiary);
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Chat Area */
+div[class^='chat'] {
+    background: var(--background-secondary);
+    border-radius: var(--border-radius);
+    padding: 10px;
+}
+
+div[class^='chat'] main {
+    background: var(--background-tertiary);
+    border-radius: var(--border-radius);
+    padding: 10px;
+}
+
+/* Message Input */
+div[class^="channelTextArea-"] {
+    background: var(--background-accent);
+    border-radius: var(--border-radius);
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+div[class^="channelTextArea-"]:focus {
+    background: var(--background-tertiary);
+}
+
+/* Modals */
+div[class*="modal-"] {
+    background: var(--background-secondary);
+    border-radius: var(--border-radius);
+    padding: 20px;
+}
+
+/* Tooltips */
+div[class^="tooltip-"] {
+    background: var(--background-accent);
+    color: var(--text-normal);
+    border-radius: var(--border-radius);
+}
+
+/* Code Blocks */
+pre {
+    background: var(--background-tertiary);
+    border-radius: var(--border-radius);
+    padding: 10px;
+}
+
+/* Miscellaneous */
+div[class^="footer-"] {
+    background-color: var(--background-secondary);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
